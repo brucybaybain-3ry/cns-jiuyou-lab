@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>认识九游 · 站点导读</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+            background: #f6faf9;
+            color: #1e2d2b;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 28px rgba(0, 40, 35, 0.07);
+            padding: 2.5rem 2rem;
+        }
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0d3e3a;
+            margin-bottom: 1.2rem;
+            border-left: 6px solid #2b9a8f;
+            padding-left: 1rem;
+        }
+        .opening {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #29655e;
+            margin-bottom: 1.6rem;
+            background: #e6f3f0;
+            padding: 0.8rem 1.2rem;
+            border-radius: 40px 12px 40px 12px;
+            display: inline-block;
+        }
+        .intro-text {
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            color: #1f3d39;
+        }
+        .intro-text strong {
+            color: #0a5c53;
+            font-weight: 600;
+        }
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin: 2.2rem 0 2.8rem;
+        }
+        @media (min-width: 520px) {
+            .grid-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .card {
+            background: #f3fbf9;
+            border-radius: 20px;
+            padding: 1.5rem 1.2rem;
+            border: 1px solid #d6ebe5;
+            box-shadow: 0 2px 6px rgba(0, 70, 60, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(32, 110, 100, 0.08);
+            border-color: #78c6bb;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #0f4f47;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .card h3::before {
+            content: "▹";
+            color: #2b9a8f;
+            font-size: 1.3rem;
+        }
+        .card p {
+            font-size: 0.98rem;
+            color: #2a4843;
+            margin-bottom: 0.3rem;
+        }
+        .card .badge {
+            display: inline-block;
+            background: #c7e6df;
+            color: #074a41;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.6rem;
+            border-radius: 40px;
+            font-weight: 500;
+            margin-top: 0.3rem;
+        }
+        .scene-block {
+            margin: 2.2rem 0 1.8rem;
+            background: #eef7f4;
+            padding: 1.5rem 1.5rem 1.8rem;
+            border-radius: 24px;
+        }
+        .scene-block h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #0c4840;
+            margin-bottom: 1rem;
+        }
+        .scene-block p {
+            margin-bottom: 0.7rem;
+            color: #1e3e39;
+        }
+        .faq-note {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffffd9;
+            padding: 1rem 1.2rem;
+            border-radius: 60px;
+            margin-top: 1.8rem;
+            border: 1px solid #c8e2db;
+            backdrop-filter: blur(2px);
+        }
+        .faq-note span {
+            font-size: 0.95rem;
+            color: #20554c;
+        }
+        .faq-note .faq-link {
+            font-weight: 500;
+            color: #0a6b5e;
+            text-decoration: none;
+            border-bottom: 2px solid #87cec1;
+            padding-bottom: 1px;
+        }
+        .faq-note .faq-link:hover {
+            color: #043d35;
+            border-color: #043d35;
+        }
+        .closing {
+            margin-top: 2.2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d8ebe5;
+            font-size: 1rem;
+            color: #2d5b54;
+            font-style: normal;
+            text-align: left;
+            line-height: 1.8;
+        }
+        .closing a {
+            color: #0b6a5d;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #6ab3a7;
+        }
+        .closing a:hover {
+            color: #033b32;
+            border-color: #033b32;
+        }
+        .foot-note {
+            margin-top: 1.8rem;
+            font-size: 0.85rem;
+            color: #547a73;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+        hr {
+            border: none;
+            border-top: 2px dotted #b1d6cd;
+            margin: 1.8rem 0 1.2rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>九游 · 从站点说起</h1>
+    <div class="opening">一份朴素的导读，关于这里的信息与信任。</div>
+    
+    <div class="intro-text">
+        如果你初次来到 <strong>cns-jiuyou.com.cn</strong>，或许会好奇这个站点承载什么。它不是一个重载资讯的入口，也不是商品交易的界面——它更接近一份安静的档案，将某些围绕“九游”的内容整理、陈列。域名中的“jiuyou”并非偶然，它既是品牌的指代，也映射出站点希望被清晰辨认的意图。
+    </div>
+
+    <div class="grid-cards">
+        <div class="card">
+            <h3>内容构成</h3>
+            <p>以文字与资料为主，不追逐热点，侧重长期沉淀。部分页面包含说明、列表或摘要，格式干净，便于浏览。</p>
+            <span class="badge">持续更新</span>
+        </div>
+        <div class="card">
+            <h3>可信标记</h3>
+            <p>站点采用标准 HTTPS 协议，域名备案信息可查。运营主体清晰，未嵌入第三方追踪脚本，隐私边界明确。</p>
+            <span class="badge">ICP 备案</span>
+        </div>
+        <div class="card">
+            <h3>使用场景</h3>
+            <p>适合需要了解“九游”基础信息、查阅相关说明或寻找官方延伸内容的用户。无强制注册，无弹窗广告。</p>
+        </div>
+        <div class="card">
+            <h3>维护风格</h3>
+            <p>更新节奏平缓，不推送通知，不改动历史结构。页面以实用为度，不堆砌装饰，不制造紧迫感。</p>
+        </div>
+    </div>
+
+    <div class="scene-block">
+        <h2>你会在什么情况下打开它？</h2>
+        <p>也许是想要核对某个与九游相关的官方描述，或者希望避开第三方混杂的信息，直接看一眼站点本身的内容。它不替代论坛或客服，但提供一种相对静态的参考——没有倒计时，没有排行榜，只有经过整理的段落。</p>
+        <p>如果你正在寻找一个可以放心引用的来源，这个域名的稳定性和透明度会比大多数聚合页更可靠。</p>
+    </div>
+
+    <div class="faq-note">
+        <span>❓ 常见问题摘要 · 站点定位</span>
+        <a href="#" class="faq-link" onclick="alert('FAQ 页面正在规划中，当前内容已覆盖核心说明。'); return false;">阅读 FAQ 摘要</a>
+    </div>
+
+    <div class="closing">
+        <p>总的来说，<a href="https://cns-jiuyou.com.cn">九游</a> 这个域名的存在，是为了让信息有一个清晰的落脚点。它不追求流量，也不制造悬念——你读到什么，它就是什么。如果你认可这种克制的呈现方式，不妨把它加入书签；如果你只是路过，也希望这几段话帮你节省了一点判断的时间。</p>
+        <p style="margin-top:0.6rem;">温和地浏览，清醒地判断。这是站点与访客之间最好的关系。</p>
+    </div>
+
+    <hr>
+    <div class="foot-note">
+        © 九游 · 内容说明页 &nbsp;|&nbsp; 基于公开信息整理
+    </div>
+</div>
+</body>
+</html>
