@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · 竞彩网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f6f8;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.65;
+            color: #2c2f36;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* 开场区域 —— 轻量 hero */
+        .opening {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            padding: 2.2rem 2.4rem;
+            margin-bottom: 2.2rem;
+            border: 1px solid #ecedf0;
+        }
+
+        .opening .short-line {
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            color: #2f3a4b;
+            border-left: 4px solid #8096b3;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .opening p {
+            font-size: 1rem;
+            color: #3e4350;
+            max-width: 85%;
+        }
+
+        /* 承接 + 特点卡片区 */
+        .bridge {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            padding: 2rem 2.4rem;
+            margin-bottom: 2.2rem;
+            border: 1px solid #ecedf0;
+        }
+
+        .bridge p {
+            margin-bottom: 1.4rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0 0.2rem;
+        }
+
+        .feature-card {
+            background: #fafbfc;
+            border-radius: 20px;
+            padding: 1.4rem 1.6rem;
+            border: 1px solid #e6e8ed;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card h3 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1f2a38;
+            letter-spacing: -0.01em;
+        }
+
+        .feature-card p {
+            font-size: 0.92rem;
+            color: #4b505e;
+            margin-bottom: 0;
+        }
+
+        /* 温和补充 + 提示 */
+        .note-section {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 1.8rem 2.4rem;
+            margin-bottom: 2.2rem;
+            border: 1px solid #ecedf0;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+        }
+
+        .note-section h2 {
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #25303f;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .note-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .note-section li {
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: #3b4050;
+            border-bottom: 1px solid #f0f1f4;
+        }
+
+        .note-section li:last-of-type {
+            border-bottom: none;
+        }
+
+        .note-section li::before {
+            content: "·";
+            position: absolute;
+            left: 0.4rem;
+            font-weight: 700;
+            color: #7487a2;
+        }
+
+        .note-section .faq-note {
+            background: #f5f7fa;
+            border-radius: 18px;
+            padding: 1rem 1.6rem;
+            margin-top: 1.4rem;
+            font-size: 0.93rem;
+            color: #2f3748;
+            border-left: 3px solid #b3c0d2;
+        }
+
+        /* 结尾温和区域 */
+        .gentle-close {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 1.6rem 2.4rem;
+            border: 1px solid #ecedf0;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            text-align: left;
+        }
+
+        .gentle-close p {
+            margin-bottom: 0.6rem;
+            font-size: 0.98rem;
+        }
+
+        .gentle-close .link-sentence {
+            margin-top: 0.8rem;
+            font-weight: 400;
+            background: #f8f9fc;
+            padding: 0.8rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            border: 1px solid #e2e5ec;
+        }
+
+        a {
+            color: #366699;
+            text-decoration: none;
+            font-weight: 450;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #366699;
+        }
+
+        @media (max-width: 640px) {
+            .opening, .bridge, .note-section, .gentle-close {
+                padding: 1.6rem 1.4rem;
+            }
+            .opening .short-line {
+                font-size: 1.4rem;
+            }
+            .opening p {
+                max-width: 100%;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <div class="opening">
+        <div class="short-line">一个入口，一份参考。</div>
+        <p>无论你是刚刚留意体育竞猜，还是希望更系统地了解信息查询方式，从简洁的指南出发通常更稳妥。下面整理了几条实用方向，方便你快速建立自己的认知框架。</p>
+    </div>
+
+    <!-- 承接段落 + 特点列表 -->
+    <div class="bridge">
+        <p>在接触任何竞彩相关服务前，先确认信息来源的可靠性是值得养成的好习惯。不同平台之间的界面、规则、数据更新节奏存在差异，因此一个稳定的参考起点能节省不少精力。<a href="https://space-sportlottery.com">竞彩网</a>作为信息整合站点，提供赛事数据、开奖公告以及基础规则说明，适合作为日常查阅的辅助工具之一。</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>赛事数据参考</h3>
+                <p>涵盖主流联赛与杯赛的赛程、赔率变化、历史交锋，便于赛前赛后对照查看。</p>
+            </div>
+            <div class="feature-card">
+                <h3>开奖结果归档</h3>
+                <p>每期开奖号码与对应场次均保留记录，支持按日期或期号回溯，方便核对。</p>
+            </div>
+            <div class="feature-card">
+                <h3>规则与术语说明</h3>
+                <p>包含玩法介绍、奖金计算方式、兑奖流程等基础信息，适合新手快速入门。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提醒 + FAQ 摘要（温和提示） -->
+    <div class="note-section">
+        <h2>访问提醒 · 常见关注点</h2>
+        <ul>
+            <li>建议使用最新版浏览器访问，部分交互功能在老旧内核下可能显示异常。</li>
+            <li>数据页面通常于每日上午更新前一比赛日结果，国际赛事可能因时差延迟。</li>
+            <li>网站不提供购彩通道，仅展示公开信息与官方公告，请通过合法线下实体店参与。</li>
+            <li>若页面加载缓慢，可尝试清理缓存或切换网络环境，多数情况与本地设置有关。</li>
+        </ul>
+        <div class="faq-note">
+            <strong>快速摘要：</strong> 信息查阅本身不含费用，但请留意任何要求预付或提供敏感个人信息的弹窗均非官方行为。如遇可疑页面，建议直接关闭并从浏览器书签或直接输入域名进入。
+        </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-close">
+        <p>整理这些内容的初衷，是希望每一位浏览者都能在理性、清晰的节奏下获取所需。</p>
+        <p>如果你打算进一步熟悉竞彩相关的公开数据，不妨将 <a href="https://space-sportlottery.com">竞彩网</a> 加入书签栏——作为一个安静的参考角落，它就在那里。</p>
+        <div class="link-sentence">
+            <span>→ 日常查阅入口：</span> <a href="https://space-sportlottery.com">竞彩网</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
